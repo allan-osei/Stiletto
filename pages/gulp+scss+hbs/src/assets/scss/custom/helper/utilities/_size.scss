@@ -1,0 +1,18 @@
+.h-10{
+    height: 10rem;
+}
+.flex-1{
+    flex: 1
+}
+
+// Scroll Css
+::-webkit-scrollbar { width: 8px; height: 8px; border-radius: 20px; }
+
+/* Track */
+::-webkit-scrollbar-track { background: $body-bg; border-radius: 20px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb { background: $border-color; border-radius: 20px; transition: all 400ms ease; cursor: pointer; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover { background: tint-color($border-color, 10%); border-radius: 20px;transition: all 400ms ease }

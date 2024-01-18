@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../assets/images/logo.png" />
+        <link rel="stylesheet" href="../assets/css/libs.min.css">
+        <link rel="stylesheet" href="../assets/css/coinex.css?v=1.0.0"> 
+    <title>Stiletto Platforms</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        #body{
+            background-image: url(img/background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 2300px;
+            width: 97%;
+        }
+        #nav{
+            
+            background: rgba(229, 99, 24, 0.71);
+           border-radius: 16px;
+           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+           backdrop-filter: blur(14.3px);
+           -webkit-backdrop-filter: blur(14.3px);
+           border: 1px solid rgba(229, 99, 24, 0.3);
+        }
+        #logo{
+            max-height: 200px;
+            max-width: 13%;
+        }
+        #Card{
+            float: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in both;
+            animation-delay: 0.5s;
+        }
+        @keyframes fadeIn {
+	        from {
+		    opacity: 0;
+		    transform: translate3d(0, -20%, 0);
+	        }
+	        to {
+		    opacity: 1;
+		    transform: translate3d(0, 0, 0);
+	        }
+        }
+        #MT{
+            max-width: 10%;
+        }
+        
+        #hoverr:hover {
+            border: 1px solid;
+            background-color: transparent;
+            color: black;
+            transform: scale(1.05);
+            will-change: transform;
+        }
+        #hove:hover {
+            border: 1px solid;
+            background-color: transparent;
+            color: black;
+            transform: scale(1.05);
+            will-change: transform;
+        }
+        #Cardd:hover {
+            position: relative;
+            top: -20px;
+        }
+
+        
+    </style>
+</head>
+
+<body id="body" style="background-color: black;">
+
+
+
+    <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar fixed-top" id="nav">
+        <div class="container-fluid navbar-inner"> 
+       
+
+          <h3 class="title">
+           <a class="link active" id="link" aria-current="page" href="#">Platforms</a>
+         </h3>
+            
+          <div class="collapse navbar-collapse" id="navbarSupportedConten">
+           <ul class="navbar-nav ms-auto navbar-list mb-2 mb-lg-0 align-items-center">
+               <li class="nav-item lead">
+                   <a class="nav-link active" href="../dashboard/home.html">Home</a>
+               </li>
+               <li class="nav-item lead">
+                   <a class="nav-link active" href="#">Pricing</a>
+               </li>
+               <li class="nav-item lead">
+                   <a class="nav-link active" aria-current="page" href="../dashboard/dashboard.html">Dashboard</a>
+               </li>
+               <li class="nav-item lead">
+                   <a class="nav-link active" href="#">Contact Us</a>
+               </li>
+           </ul>
+       </div>
+
+    
+       
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="
+          background: rgba(229, 99, 24, 0.71);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(14.3px);
+          -webkit-backdrop-filter: blur(14.3px);
+          border: 1px solid rgba(229, 99, 24, 0.3);">
+            <ul class="navbar-nav ms-auto navbar-list mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item dropdown">
+                <a class="nav-link active py-0 d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="../assets/images/avatars/01.png" alt="User-Profile" class="img-fluid avatar avatar-50 avatar-rounded">
+                  <div class="caption ms-3 ">
+                      <h6 class="mb-0 caption-title">Kevin Allan</h6>
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li class="border-0"><a class="dropdown-item" href="../dashboard/app/user-profile.html">Profile</a></li>
+                  <li class="border-0"><a class="dropdown-item" href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a></li>
+                  <li class="border-0"><hr class="m-0 dropdown-divider"></li>
+                  <li class="border-0"><a class="dropdown-item" href="../dashboard/auth/sign-in.html">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+    <br><br><br><br>
+
+
+    <div class="row justify-content-center text-center align-items-center" id="slidein">
+        <img class="img-fluid" src="img/logo.png" alt="sankofa" id="logo">
+    </div>
+
+    <div class="row justify-content-center text-center align-items-center" id="slidein">
+        <h1 class="display-5" style="color: black;"> Select a Platform</h1>
+    </div>
+
+    <br><br>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="cardd" id="Cardd" style="background: rgba(255, 255, 255, 0.12);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(4.1px);
+          -webkit-backdrop-filter: blur(4.1px);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          /* From https://css.glass */
+          background: rgba(255, 255, 255, 0.12);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(4.1px);
+          -webkit-backdrop-filter: blur(4.1px);
+          border: 1px solid rgba(255, 255, 255, 0.25);">
+            <div class="card-body text-center">
+                <h1 class="card-title"><i class="bi bi-discord" style="color: black;"></i></h1>
+              <p class="card-text display-6">Discord</p>
+              <a href="#" id="hoverr" class="btn btn-outline-light" style="border-radius: 10px;">CONNECT</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <br><br>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="cardd" id="Cardd" style="background: rgba(255, 255, 255, 0.12);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(4.1px);
+                -webkit-backdrop-filter: blur(4.1px);
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                /* From https://css.glass */
+                background: rgba(255, 255, 255, 0.12);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(4.1px);
+                -webkit-backdrop-filter: blur(4.1px);
+                border: 1px solid rgba(255, 255, 255, 0.25);">
+                    <div class="card-body text-center" >
+                        <h1 class="card-title"> <img class="img-fluid" src="img/Meta.png" alt="meta" id="MT"></h1>
+                        <p class="card-text display-6">MetaTrader 5</p>
+                        <a href="#" id="hoverr" class="btn btn-outline-light" style="border-radius: 10px;">CONNECT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <br><br>
+    
+        
+        <div class="row justify-content-center">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="cardd" id="Cardd" style="background: rgba(255, 255, 255, 0.12);
+              border-radius: 16px;
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(4.1px);
+              -webkit-backdrop-filter: blur(4.1px);
+              border: 1px solid rgba(255, 255, 255, 0.25);
+              /* From https://css.glass */
+              background: rgba(255, 255, 255, 0.12);
+              border-radius: 16px;
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(4.1px);
+              -webkit-backdrop-filter: blur(4.1px);
+              border: 1px solid rgba(255, 255, 255, 0.25);">
+                <div class="card-body text-center">
+                  <h1 class="card-title"><i class="bi bi-telegram" style="color: black;"></i></h1>
+                  <p class="card-text display-6">Telegram</p>
+                  <a href="#" id="hoverr" class="btn btn-outline-light" style="border-radius: 10px;">CONNECT</a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fdf5e7" fill-opacity="1" d="M0,192L12,170.7C24,149,48,107,72,80C96,53,120,43,144,58.7C168,75,192,117,216,144C240,171,264,181,288,192C312,203,336,213,360,186.7C384,160,408,96,432,96C456,96,480,160,504,197.3C528,235,552,245,576,234.7C600,224,624,192,648,160C672,128,696,96,720,85.3C744,75,768,85,792,85.3C816,85,840,75,864,64C888,53,912,43,936,53.3C960,64,984,96,1008,122.7C1032,149,1056,171,1080,154.7C1104,139,1128,85,1152,58.7C1176,32,1200,32,1224,58.7C1248,85,1272,139,1296,176C1320,213,1344,235,1368,240C1392,245,1416,235,1428,229.3L1440,224L1440,0L1428,0C1416,0,1392,0,1368,0C1344,0,1320,0,1296,0C1272,0,1248,0,1224,0C1200,0,1176,0,1152,0C1128,0,1104,0,1080,0C1056,0,1032,0,1008,0C984,0,960,0,936,0C912,0,888,0,864,0C840,0,816,0,792,0C768,0,744,0,720,0C696,0,672,0,648,0C624,0,600,0,576,0C552,0,528,0,504,0C480,0,456,0,432,0C408,0,384,0,360,0C336,0,312,0,288,0C264,0,240,0,216,0C192,0,168,0,144,0C120,0,96,0,72,0C48,0,24,0,12,0L0,0Z"></path></svg> -->
+</div>
+    <br>
+    <br>
+    <div class="container mx-5">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn" id="hove" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: black; color: white; border-color: white; border-radius: 2px; position: fixed; bottom: 20px; right: 20px;">
+            Add Webhook +
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" style="background-color: #131516;">
+                <div class="modal-content" style="background-color: #131516;">
+                    <div class="modal-header" style="background-color: #131516; color: aliceblue; border-color: #766e61;">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close " style="color:aliceblue;" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background-color: #131516; color: aliceblue;">
+                        <form action="{% url 'submitalert' %}" method="post">
+                            {% csrf_token %}
+                            <div class="mx-auto" style="width: 70%;background-color: #131516; color: aliceblue;">
+                                <div id="telegramInputs">
+                                    <div class="card p-3 shadow" id="tgoptions" style="background-color: #131516; color: aliceblue; border-color: #252729;">
+                                        <div class="form-check mb-3">
+                                            {{tg_form.telegram_enabled}}
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                Add a Telegram Chat
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <div class="input-group mx-auto" style="width: 60%;">
+                                                {{tg_form.channel_chat_id}}
+                                            </div><br>
+                                            <div class="row">
+                                                <div class="input-group col-auto mx-auto" style="width: 50%;height:120px">
+                                                    {{tg_form.message_prefix}}
+                                                </div>
+                                                <div class="input-group col-auto mx-auto" style="width: 50%;height:120px">
+                                                    {{tg_form.message_suffix}}
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <button type="button" class="btn btn-primary" onclick="addTelegramInput()">Telegram +</button>
+                                <br>
+                                <div id="mt5Inputs">
+                                    <div class="card p-3 shadow" style="background-color: #131516; color: aliceblue; border-color: #252729;">
+                                        <div class="form-check mb-3">
+                                            {{signalform.mt5_enabled}}
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                MetaTrader5
+                                            </label>
+                                        </div>
+                                        <div id="mt5options">
+                                            <div class="row">
+                                                <div class="input-group mb-3 col-auto mx-auto" style="width: 40%;">
+                                                    {{signalform.mt5_login}}
+                                                </div>
+                                                <div class="input-group mb-3 col-auto mx-auto" style="width: 40%;">
+                                                    {{signalform.mt5_password}}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-group mb-3 mx-auto col-auto" style="width: 40%;">
+                                                    {{signalform.mt5_lot}}
+                                                </div>
+                                                <div class="input-group mb-3 mx-auto col-auto" style="width: 40%;">
+                                                    {{signalform.mt5_server}}
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="addMT5Input()">Add More MT5 Inputs</button> -->
+                                <br>
+                                <input type="submit" value="Submit" class="btn btn-info float-end">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+
+    function addTelegramInput() {
+        var telegramInputs = document.getElementById('telegramInputs');
+        var newInput = document.createElement('div');
+        newInput.setAttribute("class", "card p-3 shadow");
+        newInput.setAttribute("style", "background-color: #131516; color: aliceblue; border-color: #252729;");
+        newInput.innerHTML = document.getElementById('tgoptions').innerHTML;
+        telegramInputs.appendChild(newInput);
+    }
+
+    function addMT5Input() {
+        var mt5Inputs = document.getElementById('mt5Inputs');
+        var newInput = document.createElement('div');
+        newInput.innerHTML = document.getElementById('mt5options').innerHTML;
+        mt5Inputs.appendChild(newInput);
+    }
+
+    function showtg() {
+        var htmlShow = document.getElementById("tgoptions");
+        if (htmlShow.style.display === "none") {
+            htmlShow.style.display = "block";
+        } else {
+            htmlShow.style.display = "none";
+        }
+    }
+    function showmt5() {
+        var htmlShow = document.getElementById("mt5options");
+        if (htmlShow.style.display === "none") {
+            htmlShow.style.display = "block";
+        } else {
+            htmlShow.style.display = "none";
+        }
+    }
+
+    function submitNew() {
+        const data = {
+            tgenabled: document.getElementById("tgenabled").value,
+            tgprefix: document.getElementById("tgprefix").value,
+            tgsuffix: document.getElementById("tgsuffix").value,
+            tginvitelink: document.getElementById("tginvitelink").value,
+            be: document.getElementById("binance_enabled").value,
+            bapi: document.getElementById("binance_api_key").value,
+            bhash: document.getElementById("binance_api_hash").value
+        };
+        fetch("{% url 'submitalert' %}", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+    }
+</script>
+
+</html>

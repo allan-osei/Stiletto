@@ -1,0 +1,29 @@
+
+.shining-card{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        content: '';
+        height: 100px;
+        width: 2px;
+        background: linear-gradient(100deg, $primary,transparent);
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 100px;
+        background: linear-gradient(50deg, $primary,transparent);
+    }
+}
+
+small, .small{
+    font-size: .875em;
+    color: #BFBFBF;
+}
+
+.iq-extra{
+    width: 300px;
+}

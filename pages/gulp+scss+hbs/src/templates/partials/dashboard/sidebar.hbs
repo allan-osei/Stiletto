@@ -1,0 +1,34 @@
+<aside class="sidebar sidebar-default navs-rounded {{ sidebarVariants }}">
+    <div class="sidebar-header d-flex align-items-center justify-content-start">
+        <a href="{{path}}dashboard/index.html" class="navbar-brand dis-none align-items-center justify-content-center">
+            {{> partials/components/logo }}
+            <h4 class="logo-title m-0">OINEX</h4>
+        </a>
+        <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
+            <i class="icon">
+                <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" stroke-width="1.5"></path>
+                    <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor" stroke-width="1.5"></path>
+                </svg>
+            </i>
+        </div>
+    </div>
+    <div class="sidebar-body p-0 data-scrollbar">
+        <div class="collapse navbar-collapse pe-3" id="sidebar">
+            {{> partials/dashboard/vertical-nav }}
+        </div>        
+        <div id="sidebar-footer" class="position-relative sidebar-footer">
+            <div class="card mx-4">
+                <div class="card-body">
+                    <div class="sidebarbottom-content">
+                        <div class="image">
+                            <img src="{{path}}assets/images/coins/13.png" alt="User-Profile" class="img-fluid">
+                        </div>
+                        <p class="mb-0">Be more secure with Pro Feature</p>
+                        <button type="button" class="btn btn-primary mt-3">Upgrade Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

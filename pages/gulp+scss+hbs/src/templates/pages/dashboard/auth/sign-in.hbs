@@ -1,0 +1,68 @@
+
+{{#extend 'layouts/dashboard/simple' title="signin" active="auth-sign-in" path="../../" bgImg="true" }}
+{{#content "content"}}
+<section class="vh-100 bg-image">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="auth-form">
+                                <h2 class="text-center mb-4">Sign In</h2>
+                                <form>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Email</label>
+                                    </div>
+                                     <div class="form-floating mb-2">
+                                        <input type="email" class="form-control" id="Password" placeholder="Password">
+                                        <label for="Password">Password</label>
+                                    </div>
+                                    <div class="d-flex justify-content-between  align-items-center flex-wrap">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"  id="Remember">
+                                                <label class="form-check-label" for="Remember">Remember me?</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <a href="#page-forgot-password.html">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-primary">Sign In</button>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <p>or sign in with others account?</p>
+                                    </div>
+                                     <div class="d-flex justify-content-center ">
+                                        <ul class="list-group list-group-horizontal   list-group-flush">
+                                            <li class="list-group-item bg-transparent border-0">
+                                            <a href="#"><img src="{{path}}assets/images/brands/01.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img60"></a>
+                                            </li>
+                                            <li class="list-group-item bg-transparent border-0">
+                                            <a href="#"><img src="{{path}}assets/images/brands/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="gm"></a>
+                                            </li>
+                                            <li class="list-group-item bg-transparent border-0">
+                                            <a href="#"><img src="{{path}}assets/images/brands/03.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="im"></a>
+                                            </li>
+                                            <li class="list-group-item bg-transparent border-0">
+                                            <a href="#"><img src="{{path}}assets/images/brands/04.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="li"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <div class="new-account mt-3 text-center">
+                                    <p>Don't have an account? <a class="" href="{{path}}dashboard/auth/sign-up.html">Click
+                                            here to sign up</a></p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/content}}
+{{/extend}}

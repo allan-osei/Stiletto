@@ -1,0 +1,29 @@
+.iq-maintenance {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    img {
+        max-height: 350px;
+    }
+    .maintenance-bottom {
+        width: 100%;
+        // background: url('../images/error/03.png') scroll bottom;
+        text-align: center;
+        padding: 3.125rem 0;
+
+        .search-input {
+            input {
+                &.form-control {
+                    background: transparent;
+                    border-radius: .5rem !important;
+                }
+            }
+        }
+        .bottom-text{
+            position: absolute;
+            left:0;
+            right:0;
+           
+        }
+    }
+}

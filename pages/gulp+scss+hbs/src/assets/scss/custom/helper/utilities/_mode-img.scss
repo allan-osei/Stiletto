@@ -1,0 +1,22 @@
+// Usage
+// <img src="" class="img-fluid mode dark-img"/>
+// <img src="" class="img-fluid mode light-img"/>
+.dark {
+    .mode {
+        &.light-img {
+            display: none;
+        }
+        &.dark-img {
+            display: block;
+        }
+    }
+}
+.mode {
+    display: none;
+    &.light-img {
+        display: block;
+    }
+    &.ltr-img {
+        display: block;
+    }
+}

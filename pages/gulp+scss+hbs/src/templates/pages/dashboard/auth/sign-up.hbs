@@ -1,0 +1,95 @@
+{{#extend 'layouts/dashboard/simple' title="signup" active="auth-sign-up" path="../../" bgImg="true" }}
+{{#content "content"}}
+<section class="vh-100 bg-image">
+   <div class="container h-100">
+      <div class="row justify-content-center h-100 align-items-center">
+         <div class="col-md-6 mt-5">
+            <div class="card">
+               <div class="card-body">
+                  <div class="auth-form">
+                        <h2 class="text-center mb-4">Sign Up</h2>
+                        <form>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                           <div class="row">
+                              <div class="col-md-6 mb-4">
+                                  <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="firstName" placeholder="FirstName">
+                                        <label for="firstName">First Name</label>
+                                    </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                 <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="lastName" placeholder="lastName">
+                                        <label for="lastName">Last Name</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-6 mb-4">
+                                  <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Email</label>
+                                    </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                 <div class="form-floating mb-3">
+                                       <input type="text" class="form-control" id="phoneno" placeholder="phoneno">
+                                       <label for="phoneno">Phone no</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-6 mb-4">
+                                  <div class="form-floating mb-2">
+                                        <input type="text" class="form-control" id="Password" placeholder="Password">
+                                        <label for="Password">Password</label>
+                                    </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                  <div class="form-floating mb-2">
+                                        <input type="text" class="form-control" id="confirmpassword" placeholder="confirmpassword">
+                                        <label for="confirmpassword">Confirm-password</label>
+                                    </div>
+                              </div>
+                           </div>
+                           <div class="form-check d-flex justify-content-center  mb-2">
+                              <input type="checkbox" class="form-check-input" id="agree">
+                              <label class="ms-1 form-check-label" for="agree">I agree with the terms of
+                                 use</label>
+                           </div>
+                           <div class="text-center">
+                              <button type="button" class="btn btn-primary">Sign Up</button>
+                           </div>
+                           <div class="text-center mt-3">
+                              <p>or sign in with others account?</p>
+                           </div>
+                           <div class="d-flex justify-content-center">
+                                 <ul class="list-group list-group-horizontal list-group-flush">
+                                    <li class="list-group-item border-0 bg-transparent">
+                                       <a href="#"><img src="{{path}}assets/images/brands/01.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="fb"></a>
+                                    </li>
+                                    <li class="list-group-item border-0 bg-transparent">
+                                       <a href="#"><img src="{{path}}assets/images/brands/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="gm"></a>
+                                    </li>
+                                    <li class="list-group-item border-0 bg-transparent">
+                                       <a href="#"><img src="{{path}}assets/images/brands/03.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="im"></a>
+                                    </li>
+                                    <li class="list-group-item border-0 bg-transparent">
+                                       <a href="#"><img src="{{path}}assets/images/brands/04.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="li"></a>
+                                    </li>
+                                 </ul>
+                              </div>
+                        </form>
+                        <div class="new-account mt-3 text-center">
+                           <p>Already have an Account <a class="text-primary" href="{{path}}dashboard/auth/sign-in.html">Sign in</a>
+                           </p>
+                        </div>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{{/content}}
+{{/extend}}

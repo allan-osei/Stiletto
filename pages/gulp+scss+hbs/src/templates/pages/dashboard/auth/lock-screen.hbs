@@ -1,0 +1,33 @@
+{{#extend 'layouts/dashboard/simple' title="lock-screen" active="auth-lock-screen" path="../../" bgImg="true"}}
+{{#content "content"}}
+<section class="vh-100 bg-image">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-5 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                            <div class="auth-form">
+                                <div class="text-center">
+                                    <img src="{{path}}assets/images/avatars/01.png"
+                                        class="img-fluid avatar avatar-100 avatar-rounded" alt="profile-image">
+                                </div>
+                                <div>
+                                    <h1 class="mt-3 text-center">Hi ! Austin Robertson</h1>
+                                    <p class="text-center  mt-2">Enter your password to acess the admin</p>
+                                     <div class="form-floating mb-2">
+                                        <input type="email" class="form-control" id="Password" placeholder="Password">
+                                        <label for="Password">Password</label>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-primary btn-sm">Login</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/content}}
+{{/extend}}

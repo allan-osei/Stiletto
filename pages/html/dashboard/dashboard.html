@@ -1,0 +1,1040 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+      
+      <title>Stiletto Dashboard</title>
+      <link rel="shortcut icon" href="../assets/images/logo.png" />
+      <link rel="stylesheet" href="../assets/css/libs.min.css">
+      <link rel="stylesheet" href="../assets/css/coinex.css?v=1.0.0">  
+      
+      <style>
+         body{
+            background-image: url(img/background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+         }
+         
+
+         
+      </style> 
+   </head>
+  
+  <body class=" ">
+ 
+   <aside class="sidebar sidebar-body sidebar-default navs-rounded" style="
+   background: rgba(31, 21, 16, 0.87);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(3.2px);
+   -webkit-backdrop-filter: blur(3.2px);">
+        <div class="d-flex align-items-center justify-content-start">
+            <a href="../dashboard/dashboard.html" class="navbar-brand dis-none align-items-center justify-content-center">
+                       <h4 class="logo-title m-0">Stiletto</h4>
+            </a>
+            <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
+                <i class="icon">
+                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" stroke-width="1.5"></path>
+                        <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor" stroke-width="1.5"></path>
+                    </svg>
+                </i>
+            </div>
+        </div>
+        <div class="p-0 data-scrollbar">
+            <div class="collapse navbar-collapse pe-3" id="sidebar">
+                <ul class="navbar-nav iq-main-menu">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="../dashboard/dashboard.html">
+                            <i class="icon">
+                            <svg width="22" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.15722 20.7714V17.7047C9.1572 16.9246 9.79312 16.2908 10.581 16.2856H13.4671C14.2587 16.2856 14.9005 16.9209 14.9005 17.7047V17.7047V20.7809C14.9003 21.4432 15.4343 21.9845 16.103 22H18.0271C19.9451 22 21.5 20.4607 21.5 18.5618V18.5618V9.83784C21.4898 9.09083 21.1355 8.38935 20.538 7.93303L13.9577 2.6853C12.8049 1.77157 11.1662 1.77157 10.0134 2.6853L3.46203 7.94256C2.86226 8.39702 2.50739 9.09967 2.5 9.84736V18.5618C2.5 20.4607 4.05488 22 5.97291 22H7.89696C8.58235 22 9.13797 21.4499 9.13797 20.7714V20.7714" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>                            
+                            </i>
+                            <span class="item-name">Dashboard</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-user" role="button" aria-expanded="false" aria-controls="sidebar-user">
+                            <i class="icon">
+                            <svg width="22" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9849 15.3462C8.11731 15.3462 4.81445 15.931 4.81445 18.2729C4.81445 20.6148 8.09636 21.2205 11.9849 21.2205C15.8525 21.2205 19.1545 20.6348 19.1545 18.2938C19.1545 15.9529 15.8735 15.3462 11.9849 15.3462Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.9849 12.0059C14.523 12.0059 16.5801 9.94779 16.5801 7.40969C16.5801 4.8716 14.523 2.81445 11.9849 2.81445C9.44679 2.81445 7.3887 4.8716 7.3887 7.40969C7.38013 9.93922 9.42394 11.9973 11.9525 12.0059H11.9849Z" stroke="currentColor" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"></path> </svg>                            
+                            </i>
+                            <span class="item-name">Users</span>
+                            <i class="right-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </i>
+                        </a>
+                        <ul class="sub-nav collapse" id="sidebar-user" data-bs-parent="#sidebar">
+                            <li class="nav-item">
+                                <a class="nav-link " href="../dashboard/app/user-profile.html">
+                                    <i class="icon">
+                                    <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                    </svg>                           
+                                    </i>
+                                    <i class="sidenav-mini-icon"> U </i>
+                                    <span class="item-name">User Profile</span>
+                                </a>
+                            </li>
+                           <li class="nav-item">
+                              <a class="nav-link " href="../dashboard/app/user-profile-edit.html">
+                                  <i class="icon">
+                                      <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                      </svg> 
+                                  </i>
+                                  <i class="sidenav-mini-icon"> E </i>
+                                  <span class="item-name">Edit User Profile</span>
+                              </a>
+                          </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="../dashboard/app/user-add.html">
+                                    <i class="icon">
+                                        <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                        </svg> 
+                                    </i>
+                                    <i class="sidenav-mini-icon"> A </i>
+                                    <span class="item-name">Add User</span>
+                                </a>
+                             </li>
+                             <li class="nav-item">
+                              <a class="nav-link " href="../dashboard/app/user-privacy-setting.html">
+                                  <i class="icon">
+                                      <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                      </svg> 
+                                  </i>
+                                  <i class="sidenav-mini-icon"> P </i>
+                                  <span class="item-name">Privacy Settings</span>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                           <a class="nav-link " href="../dashboard/app/user-account-setting.html">
+                               <i class="icon">
+                                   <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                   </svg> 
+                               </i>
+                               <i class="sidenav-mini-icon"> A</i>
+                               <span class="item-name">Account Settings</span>
+                           </a>
+                       </li>
+                     
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-auth" role="button" aria-expanded="false" aria-controls="sidebar-user">
+                            <i class="icon">
+                                 <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9846 21.606C11.9846 21.606 19.6566 19.283 19.6566 12.879C19.6566 6.474 19.9346 5.974 19.3196 5.358C18.7036 4.742 12.9906 2.75 11.9846 2.75C10.9786 2.75 5.26557 4.742 4.65057 5.358C4.03457 5.974 4.31257 6.474 4.31257 12.879C4.31257 19.283 11.9846 21.606 11.9846 21.606Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M9.38574 11.8746L11.2777 13.7696L15.1757 9.86963" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span class="item-name">Authentication</span>
+                            <i class="right-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </i>
+                        </a>
+                        <ul class="sub-nav collapse" id="sidebar-auth" data-bs-parent="#sidebar">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/auth/sign-in.html">
+                                    <i class="icon">
+                                        <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                        </svg> 
+                                    </i>
+                                    <i class="sidenav-mini-icon"> L </i>
+                                    <span class="item-name">Login</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/auth/sign-up.html">
+                                    <i class="icon">
+                                        <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                        </svg> 
+                                    </i>
+                                    <i class="sidenav-mini-icon"> R </i>
+                                    <span class="item-name">Register</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/auth/confirm-mail.html">
+                                    <i class="icon">
+                                        <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                        </svg> 
+                                    </i>
+                                    <i class="sidenav-mini-icon"> C </i>
+                                    <span class="item-name">Confirm Mail</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/auth/lock-screen.html">
+                                    <i class="icon">
+                                        <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                        </svg> 
+                                    </i>
+                                    <i class="sidenav-mini-icon"> L </i>
+                                    <span class="item-name">Lock Screen</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/auth/recoverpw.html">
+                                   <i class="icon">
+                                        <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                        </svg> 
+                                    </i>
+                                    <i class="sidenav-mini-icon"> R </i>
+                                    <span class="item-name">Recover password</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item">
+                     <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-policies" role="button" aria-expanded="false" aria-controls="sidebar-user">
+                        <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                   
+                            <path d="M13.7476 20.4428H21.0002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                    
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.78 3.79479C13.5557 2.86779 14.95 2.73186 15.8962 3.49173C15.9485 3.53296 17.6295 4.83879 17.6295 4.83879C18.669 5.46719 18.992 6.80311 18.3494 7.82259C18.3153 7.87718 8.81195 19.7645 8.81195 19.7645C8.49578 20.1589 8.01583 20.3918 7.50291 20.3973L3.86353 20.443L3.04353 16.9723C2.92866 16.4843 3.04353 15.9718 3.3597 15.5773L12.78 3.79479Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                  
+                              <path d="M11.021 6.00098L16.4732 10.1881" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                               
+                         </svg>                            
+                         <span class="item-name">Policies</span>
+                         <i class="right-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                             </svg>
+                         </i>
+                     </a>
+                     <ul class="sub-nav collapse" id="sidebar-policies" data-bs-parent="#sidebar">
+                         <li class="nav-item">
+                             <a class="nav-link" href="../dashboard/extra/privacy-policy.html">
+                                 <i class="icon">
+                                     <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                     </svg> 
+                                 </i>
+                                 <i class="sidenav-mini-icon"> P </i>
+                                 <span class="item-name">Privacy Policy</span>
+                             </a>
+                         </li>
+                         <li class="nav-item">
+                           <a class="nav-link" href="../dashboard/extra/terms-of-service.html">
+                               <i class="icon">
+                                   <svg width="10" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <rect x="0.5" y="1" width="11" height="11" stroke="currentcolor"/>
+                                   </svg> 
+                               </i>
+                               <i class="sidenav-mini-icon"> T </i>
+                               <span class="item-name">Terms of Service</span>
+                           </a>
+                       </li>
+                     </ul>
+                     </li>
+                    <li><hr class="hr-horizontal"></li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../dashboard/home.html" target="_blank">
+                           <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                    
+                              <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                   
+                               <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                              
+                           </svg>                            
+                            <span class="item-name">Back To Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " target="_blank" href="../dashboard/platforms.html">
+                           <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                    
+                              <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                   
+                               <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                              
+                           </svg>  
+                            <span class="item-name">Back to Platforms</span>
+                        </a>
+                    </li>
+                </ul>        </div>        
+           
+        </div>
+    </aside>    <main class="main-content">
+      <div class="position-relative">
+        <!--Nav Start-->
+        <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar" style=" background: rgba(229, 99, 24, 0.71);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14.3px);
+        -webkit-backdrop-filter: blur(14.3px);
+        border: 1px solid rgba(229, 99, 24, 0.3);">
+         <div class="container-fluid navbar-inner"> 
+           <a href="../dashboard/dashboard.html" class="navbar-brand">
+           </a>
+           <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
+               <i class="icon">
+                <svg width="20px" height="20px" viewBox="0 0 24 24">
+                   <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+               </svg>
+               </i>
+           </div>
+
+           <h3 class="title">
+            <a class="link active" id="link" aria-current="page" href="#">Dashboard</a>
+          </h3>
+             
+           <div class="collapse navbar-collapse" id="navbarSupportedConten">
+            <ul class="navbar-nav ms-auto navbar-list mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item lead">
+                    <a class="nav-link active" href="../dashboard/home.html">Home</a>
+                </li>
+                <li class="nav-item lead">
+                    <a class="nav-link active" href="#">Pricing</a>
+                </li>
+                <li class="nav-item lead">
+                    <a class="nav-link active" href="../dashboard/platforms.html">Platforms</a>
+                </li>
+                <li class="nav-item lead">
+                    <a class="nav-link active" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
+     
+        
+
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon">
+               </span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent" style="
+           background: rgba(229, 99, 24, 0.71);
+           border-radius: 16px;
+           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+           backdrop-filter: blur(14.3px);
+           -webkit-backdrop-filter: blur(14.3px);
+           border: 1px solid rgba(229, 99, 24, 0.3);">
+             <ul class="navbar-nav ms-auto navbar-list mb-2 mb-lg-0 align-items-center">
+               <li class="nav-item dropdown">
+                 <a href="#"  class="nav-link active" id="notification-drop" data-bs-toggle="dropdown" >
+                   <svg width="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.8476C17.6392 17.8476 20.2481 17.1242 20.5 14.2205C20.5 11.3188 18.6812 11.5054 18.6812 7.94511C18.6812 5.16414 16.0452 2 12 2C7.95477 2 5.31885 5.16414 5.31885 7.94511C5.31885 11.5054 3.5 11.3188 3.5 14.2205C3.75295 17.1352 6.36177 17.8476 12 17.8476Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.3889 20.8572C13.0247 22.3719 10.8967 22.3899 9.51953 20.8572" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>                            
+                   <span class="bg-danger dots"></span>
+                 </a>
+                 <div class="sub-drop dropdown-menu iq-noti dropdown-menu-end p-0" aria-labelledby="notification-drop">
+                     <div class="card shadow-none m-0" >
+                       <div class="card-header d-flex justify-content-between" style="
+                       background: rgba(31, 21, 16, 0.87);
+                       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                       backdrop-filter: blur(3.2px);
+                       -webkit-backdrop-filter: blur(3.2px);">
+                           <div class="header-title">
+                             <p class="fs-6 ">New notifications.</p>
+                           </div>
+                           <div class="header-title">
+                             <p class="fs-6">Mark all</p>
+                           </div>
+                       </div>
+                       <div class="card-body p-0" style="
+                     background: rgba(31, 21, 16, 0.87);
+                     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                     backdrop-filter: blur(3.2px);
+                     -webkit-backdrop-filter: blur(3.2px);">
+                           <a href="#" class="iq-sub-card">
+                             <div class="d-flex">
+                                 <img src="../assets/images/utilities/05.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img51"><div class="ms-3 w-100">
+                                   <h6 class="mb-0 ">Successfull transaction og 0.01 BTC</h6>
+                                   <div class="d-flex justify-content-between align-items-center">
+                                       <p class="mb-0">15 mins ago</p>
+                                       </div>
+                                 </div>
+                             </div>
+                           </a>
+                           <a href="#" class="iq-sub-card">
+                             <div class="d-flex align-items-center">
+                                 <div class="">
+                                   <img src="../assets/images/utilities/03.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img52">
+                                 </div>
+                                 <div class="ms-3 w-100">
+                                   <h6 class="mb-0 ">4 of Pending Transactions!</h6>
+                                   <div class="d-flex justify-content-between align-items-center">
+                                       <p class="mb-0">30 mins ago</p>
+                                       
+                                   </div>
+                                 </div>
+                             </div>
+                           </a>
+                           <a href="#" class="iq-sub-card">
+                             <div class="d-flex align-items-center">
+                                 <img src="../assets/images/utilities/04.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img53"><div class="ms-3 w-100">
+                                   <h6 class="mb-0 ">Cancelled order of 2000 ICO</h6>
+                                   <div class="d-flex justify-content-between align-items-center">
+                                       <p class="mb-0">55 mins ago</p>
+                                       
+                                   </div>
+                                 </div>
+                             </div>
+                           </a>
+                           <a href="#" class="iq-sub-card">
+                             <div class="d-flex align-items-center">
+                                 <img src="../assets/images/utilities/05.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img54"><div class="w-100 ms-3">
+                                   <h6 class="mb-0 ">Great speed notify of 1.34 LTC</h6>
+                                   <div class="d-flex justify-content-between align-items-center">
+                                       <p class="mb-0">14 Mar</p>
+                                       
+                                   </div>
+                                 </div>
+                             </div>
+                           </a>
+                       </div>
+                     </div>
+                 </div>
+               </li>
+               <li class="nav-item dropdown" >
+                 <a href="#" class="nav-link active" id="mail-drop" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+                   <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.9028 8.85107L13.4596 12.4641C12.6201 13.1301 11.4389 13.1301 10.5994 12.4641L6.11865 8.85107" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>                            
+                   <span class="bg-primary count-mail"></span>
+                 </a>
+                 <div class="sub-drop dropdown-menu dropdown-menu-end p-0" aria-labelledby="mail-drop">
+                     <div class="card shadow-none m-0">
+                       <div class="card-header d-flex justify-content-between py-3" style="
+                       background: rgba(31, 21, 16, 0.87);
+                       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                       backdrop-filter: blur(3.2px);
+                       -webkit-backdrop-filter: blur(3.2px);">
+                           <div class="header-title">
+                             <p class="mb-0 text-white">Our Latest News</p>
+                           </div>
+                       </div>
+                       <div class="card-body p-0" style="
+                       background: rgba(31, 21, 16, 0.87);
+                       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                       backdrop-filter: blur(3.2px);
+                       -webkit-backdrop-filter: blur(3.2px);">
+                           <a href="#" class="iq-sub-card">
+                             <div class="d-flex ">
+                                 <div class="">
+                                   <img src="../assets/images/coins/02.png" class="img-fluid avatar avatar-50 avatar-rounded" alt="img55">
+                                 </div>
+                                 <div class=" w-100 ms-3">
+                                   <h6 class="mb-0 ">Bitcoin</h6>
+                                   <small class="float-left font-size-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </small>
+                                 </div>
+                             </div>
+                           </a>
+                           <a href="#" class="iq-sub-card">
+                             <div class="d-flex">
+                                 <div class="">
+                                   <img src="../assets/images/coins/03.png" class="img-fluid avatar avatar-50 avatar-rounded" alt="img56">
+                                 </div>
+                                 <div class="ms-3">
+                                   <h6 class="mb-0 ">Ethereum</h6>
+                                   <small class="float-left font-size-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </small>
+                                 </div>
+                             </div>
+                           </a>
+                           <a href="#" class="iq-sub-card">
+                             <div class="d-flex">
+                                 <div class="">
+                                   <img src="../assets/images/coins/06.png" class="img-fluid avatar avatar-50 avatar-rounded" alt="img57">
+                                 </div>
+                                 <div class="ms-3">
+                                   <h6 class="mb-0 ">Litecoin</h6>
+                                   <small class="float-left font-size-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+                                 </div>
+                             </div>
+                           </a>
+                       </div>
+                     </div>
+                 </div>
+               </li>
+               <li class="nav-item dropdown">
+                 <a class="nav-link active py-0 d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   <img src="../assets/images/avatars/01.png" alt="User-Profile" class="img-fluid avatar avatar-50 avatar-rounded">
+                   <div class="caption ms-3 ">
+                       <h6 class="mb-0 caption-title">Kevin Allan</h6>
+                   </div>
+                 </a>
+                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="
+                 background: rgba(31, 21, 16, 0.87);
+                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                 backdrop-filter: blur(3.2px);
+                 -webkit-backdrop-filter: blur(3.2px);">
+                   <li class="border-0"><a class="dropdown-item" href="../dashboard/app/user-profile.html">Profile</a></li>
+                   <li class="border-0"><a class="dropdown-item" href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a></li>
+                   <li class="border-0"><hr class="m-0 dropdown-divider"></li>
+                   <li class="border-0"><a class="dropdown-item" href="../dashboard/auth/sign-in.html">Logout</a></li>
+                 </ul>
+               </li>
+             </ul>
+           </div>
+         </div>
+       </nav>  
+                 <!--Nav End-->
+                 
+        <br><br><br>
+
+      </div>
+      <div class="container-fluid content-inner pb-0">
+<div class="row">
+   <div class="col-lg-12">
+         <div class="row align-items-center mb-4">
+            <div class="col-xl-9 d-none d-md-block">
+               <div class="mb-xl-0">
+                  <div class="card card-body" style="
+                  background: rgba(31, 21, 16, 0.87);
+                  border-radius: 16px;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  backdrop-filter: blur(3.2px);
+                  -webkit-backdrop-filter: blur(3.2px);">
+                     <div class="d-flex justify-content-between flex-wrap">
+                        <div class="d-flex">
+                           <img src="../assets/images/coins/06.png" class="img-fluid avatar avatar-40 avatar-rounded" alt="img8">
+                           <div class="dropdown mt-2 ms-2">
+                              <a href="#" class="text-white" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                                 <span class="mt-2">Litecoin</span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                 </svg>
+                              </a>
+                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton4" style=" background: rgba(31, 21, 16, 0.87);
+                              border-radius: 16px;
+                              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                              backdrop-filter: blur(3.2px);
+                              -webkit-backdrop-filter: blur(3.2px);">
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/01.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img71"> 561,511 Btc</a></li>
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/06.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img72"> 561,511 Ltc</a></li>
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/03.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img73"> 561,511 Eth</a></li>
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/08.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img74"> 561,511 Xmr</a></li>
+                              </ul>
+                           </div>                    
+                           <div class="dropdown mt-2 ms-2">
+                              <a href="#" class="text-white" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                                 <span class="mt-2 ">BTC/USD</span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                 </svg>
+                              </a>
+                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton4" style=" background: rgba(31, 21, 16, 0.87);
+                              border-radius: 16px;
+                              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                              backdrop-filter: blur(3.2px);
+                              -webkit-backdrop-filter: blur(3.2px);">
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/01.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img71"> 561,511 Btc</a></li>
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/06.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img72"> 561,511 Ltc</a></li>
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/03.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img73"> 561,511 Eth</a></li>
+                                 <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/08.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img74"> 561,511 Xmr</a></li>
+                              </ul>
+                           </div> 
+                        </div>
+                        <div class="d-none d-lg-block w-50">
+                           <div class="d-flex justify-content-evenly flex-1">
+                              <span class=" text-primary">
+                                 37,390.00<br>
+                                 <small>$37,390.00</small>
+                              </span>
+                              <span class=" text-primary">
+                                 129.51+0.8%<br>
+                                 <small>24th changes</small>
+                              </span>
+                              <span class="">
+                                 37,440.01<br>
+                                 <small>24th high</small>
+                              </span>
+                              <span class="">
+                                 37,327.30<br>
+                                 <small>24th low</small>
+                              </span>
+                              <span class="d-none">
+                                 37,390.00<br>
+                                 <small>24th volume(BTC)</small>
+                              </span>                     
+                           </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                           <span class="">
+                              <svg width="32" height="32" viewBox="0 0 34 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="6" width="1" height="53" rx="0.5" fill="white"/>
+                              <rect x="0.5" y="9.5" width="12" height="34" rx="1.5" fill="#202022"/>
+                              <rect x="0.5" y="9.5" width="12" height="34" rx="1.5" stroke="white"/>
+                              <rect x="27" width="1" height="53" rx="0.5" fill="white"/>
+                              <rect x="21.5" y="13.5" width="12" height="25" rx="1.5" fill="#202022"/>
+                              <rect x="21.5" y="13.5" width="12" height="25" rx="1.5" stroke="white"/>
+                              </svg>
+                           </span>
+                           <a href="#" class="bg-secondary rounded-1 p-2 ms-2">
+                              <svg width="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M26.3875 14.1244L16.8484 23.7653L5.99906 16.9795C4.44458 16.0069 4.76794 13.6457 6.5262 13.1315L32.2854 5.58795C33.8954 5.11605 35.3876 6.62138 34.9093 8.23666L27.2885 33.9779C26.7664 35.7387 24.4187 36.0533 23.4553 34.4921L16.8433 23.767" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>     
+            </div>      
+            <div class="col-xl-3">
+               <div class="d-grid grid-3-auto gap-card">
+                  <div class="dropdown">
+                     <button class="btn btn-primary w-100" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" style="
+                     background: rgba(229, 99, 24, 0.71);
+                     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                     backdrop-filter: blur(14.3px);
+                     -webkit-backdrop-filter: blur(14.3px);
+                     border: 1px solid rgba(229, 99, 24, 0.3);">
+                        Buy / Sell
+                     </button>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                        <div class="card card-body mb-0" style="
+                        background: rgba(31, 21, 16, 0.87);
+                        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(3.2px);
+                        -webkit-backdrop-filter: blur(3.2px);">
+                           <div class="iq-extra">
+                              <div class="d-flex justify-content-between">
+                                 <div class="header-title">
+                                    <p class="fs-6 ">Buy</p>
+                                 </div>
+                                 <div class="header-title">
+                                    <p class="fs-6">Sell</p>
+                                 </div>
+                              </div>
+                              <select class="form-select mb-3" aria-label="Default select example">
+                                 <option selected><a href="#" class="dropdown-item"><img src="../assets/images/coins/01.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img71"> 561,511 Btc</a></option>
+                                 <option><li><a href="#" class="dropdown-item"><img src="../assets/images/coins/01.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img71"> 561,511 Btc</a></li></option>
+                                 <option><li><a href="#" class="dropdown-item"><img src="../assets/images/coins/06.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img72"> 561,511 Ltc</a></li></option>
+                              </select>
+                              <div class="d-flex justify-content-between">
+                                 <h6>Amount(USD)</h6>
+                                 <h6 class="mt-3 text-warning">USD</h6>
+                              </div>
+                              <p>$5.696.24</p>
+                              <div class="d-flex justify-content-between">
+                                 <h6>Amount(BTC)</h6>
+                                 <h6 class="mt-3 text-warning">BTC</h6>
+                              </div>
+                              <p>$5.696.24</p>             
+                              <div class="d-flex justify-content-center">
+                                 <button class="btn btn-primary" type="button">Buy BTC</button>
+                              </div>
+                           </div>
+                        </div>
+                     </ul>
+                  </div>            
+                  <div class="dropdown">
+                     <button class="btn btn-primary w-100" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false" style="
+                     background: rgba(229, 99, 24, 0.71);
+                     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                     backdrop-filter: blur(14.3px);
+                     -webkit-backdrop-filter: blur(14.3px);
+                     border: 1px solid rgba(229, 99, 24, 0.3);">
+                        + Add Crypto
+                     </button>
+                     <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton4" style="
+                     background: rgba(31, 21, 16, 0.87);
+                     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                     backdrop-filter: blur(3.2px);
+                     -webkit-backdrop-filter: blur(3.2px);">
+                        <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/01.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img71"> 561,511 Btc</a></li>
+                        <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/06.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img72"> 561,511 Ltc</a></li>
+                        <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/03.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img73"> 561,511 Eth</a></li>
+                        <li><a href="#" class="dropdown-item"><img src="../assets/images/coins/08.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img74"> 561,511 Xmr</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+   </div>
+</div>
+<div class="row">
+   <div class="col-lg-8">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="row">
+             
+              
+               
+               
+            </div>
+         </div>
+         <div class="col-lg-7">
+            <div class="card card-body" style="
+            background: rgba(31, 21, 16, 0.87);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3.2px);
+            -webkit-backdrop-filter: blur(3.2px);">
+               <div class="d-flex justify-content-between flex-wrap">
+                  <div>
+                     <h4 class="mb-2">Market Overview</h4>        
+                  </div>
+                  <div class="d-flex align-items-center align-self-center">
+      
+                    
+                     
+                     
+                  </div>
+               </div>
+               
+               <br>
+               <div>
+                  
+                  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                  <script>
+                     const xValues = [100,200,300,400,500,600,700,800,900,1000];
+                     
+                     new Chart("myChart", {
+                       type: "line",
+                       data: {
+                         labels: xValues,
+                         datasets: [{ 
+                           data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                           fill: false, 
+                           lineTension: 0.1,
+                           backgroundColor: "black",
+                           borderColor: "rgba(18, 12, 9, 0.87)",
+                         }, { 
+                           data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                           fill: false,
+                           lineTension: 0.1,
+                           backgroundColor: "orange",
+                           borderColor: "rgba(18, 12, 9, 0.87)",
+                         }, { 
+                           data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                           fill: false,
+                           lineTension: 0.1,
+                           backgroundColor: "white",
+                           borderColor: "rgba(18, 12, 9, 0.87)",
+                         }]
+                       },
+                       options: {
+                         legend: {display: false}
+                       }
+                     });
+                     </script>
+                
+               </div>
+            </div>
+         
+         </div>
+         <div class="col-lg-12">
+            <div class="card card-block card-body card-stretch custom-scroll" style=" background: rgba(31, 21, 16, 0.87);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3.2px);
+            -webkit-backdrop-filter: blur(3.2px);">
+               <div class="d-flex flex-wrap justify-content-between align-items-center">
+                  <div class="caption">
+                     <h4 class="font-weight-bold mb-2">Recent Trading Activities</h4>
+                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                     <input type="checkbox" class="btn-check" id="btncheck1">
+                     <label class="btn btn-sm btn-secondary active rounded-start" for="btncheck1">Monthly</label>
+
+                     <input type="checkbox" class="btn-check" id="btncheck2">
+                     <label class="btn btn-sm btn-secondary " for="btncheck2">Weekly</label>
+
+                     <input type="checkbox" class="btn-check" id="btncheck3">
+                     <label class="btn btn-sm btn-secondary rounded-end" for="btncheck3">Today</label>
+                  </div>
+               </div>
+               <div>
+                  <div class="table-responsive">
+                     <table class="table data-table mb-0">
+                        <thead>
+                           <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">24h %</th>
+                              <th scope="col">7d %</th>
+                              <th scope="col">Market Cap</th>
+                              <th scope="col">Volume(24th)</th>
+                              <th scope="col">Circulating</th>
+                              <th scope="col">Last 7 Days</th>
+                           </tr>
+                        </thead>
+                           <tbody>
+                              <tr class="white-space-no-wrap">
+                                 <td>
+                                    <img src="../assets/images/coins/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img23" />
+                                    Bitcoin BTC<a class="button btn-primary badge ms-2" type="button">Buy</a>
+                                 </td>
+                                 <td class="pe-2">$40,501.87</td>
+                                 <td class="text-danger"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4.5L0.535898 0L7.4641 0L4 4.5Z" fill="#FF2E2E"/>
+                                    </svg>
+                                    6.93%
+                                 </td>
+                                 <td class="text-success"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0.5L7.4641 5H0.535898L4 0.5Z" fill="#00EC42"/>
+                                    </svg>
+                                    4.58%
+                                 </td>
+                                 <td>$123,456,789,159</td>
+                                 <td>$373,359,580,155<br>
+                                    <small class="ms-5">635,237 BTC</small>
+                                 </td>
+                                 <td class="ms-5">18,777,768 BTC</td>
+                                 <td>
+                                    <div class="d-flex justify-content-between">
+                                       <div id="sparklinechart-1"></div>             
+                                       <div class="dropdown ms-4">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" id="dropdownMenuButton10" data-bs-toggle="dropdown" aria-expanded="false" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                                          </svg>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                                             <li><a class="dropdown-item" href="#">View Charts</a></li>
+                                             <li><a class="dropdown-item" href="#">View Markets</a></li>
+                                             <li><a class="dropdown-item" href="#">View Historical Data</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="white-space-no-wrap">
+                                 <td>
+                                       <img src="../assets/images/coins/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img23" />
+                                       Ethereum ETH<a class="button btn-primary badge ms-2" type="button">Buy</a>
+                                 </td>
+                                 <td class="pe-2">$2,796.60</td>
+                                 <td class="text-danger"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4.5L0.535898 0L7.4641 0L4 4.5Z" fill="#FF2E2E"/>
+                                    </svg>
+                                    3.33%
+                                 </td>
+                                 <td class="text-success"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0.5L7.4641 5H0.535898L4 0.5Z" fill="#00EC42"/>
+                                    </svg>
+                                    15.45%
+                                 </td>
+                                 <td>$123,456,789,159</td>
+                                 <td>$373,359,580,155<br>
+                                    <small class="ms-5">635,237 BTC</small>
+                                 </td>
+                                 <td class="ms-5">18,777,768 BTC</td>
+                                 <td>
+                                    <div class="d-flex justify-content-between">
+                                       <div id="sparklinechart-2"></div>             
+                                       <div class="dropdown ms-4">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" id="dropdownMenuButton10" data-bs-toggle="dropdown" aria-expanded="false" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                                          </svg>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                                             <li><a class="dropdown-item" href="#">View Charts</a></li>
+                                             <li><a class="dropdown-item" href="#">View Markets</a></li>
+                                             <li><a class="dropdown-item" href="#">View Historical Data</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="white-space-no-wrap">
+                                 <td>
+                                       <img src="../assets/images/coins/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img23" />
+                                       Monero XMR<a class="button btn-primary badge ms-2" type="button">Buy</a>
+                                 </td>
+                                 <td class="pe-2">$1.00</td>
+                                 <td class="text-success"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0.5L7.4641 5H0.535898L4 0.5Z" fill="#00EC42"/>
+                                    </svg>
+                                    0.01%
+                                 </td>
+                                 <td class="text-danger"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4.5L0.535898 0L7.4641 0L4 4.5Z" fill="#FF2E2E"/>
+                                    </svg>
+                                    0.02%
+                                 </td>
+                                 <td>$123,456,789,159</td>
+                                 <td>$373,359,580,155<br>
+                                    <small class="ms-5">635,237 BTC</small>
+                                 </td>
+                                 <td class="ms-5">18,777,768 BTC</td>
+                                 <td>
+                                    <div class="d-flex justify-content-between">
+                                       <div id="sparklinechart-3"></div>             
+                                       <div class="dropdown ms-4">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" id="dropdownMenuButton10" data-bs-toggle="dropdown" aria-expanded="false" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                                          </svg>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                                             <li><a class="dropdown-item" href="#">View Charts</a></li>
+                                             <li><a class="dropdown-item" href="#">View Markets</a></li>
+                                             <li><a class="dropdown-item" href="#">View Historical Data</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="white-space-no-wrap">
+                                 <td>
+                                       <img src="../assets/images/coins/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img23" />
+                                       Litecoin LTC<a class="button btn-primary badge ms-2" type="button">Buy</a>
+                                 </td>
+                                 <td class="pe-2">$40,501.87</td>
+                                 <td class="text-danger"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4.5L0.535898 0L7.4641 0L4 4.5Z" fill="#FF2E2E"/>
+                                    </svg>
+                                    6.93%
+                                 </td>
+                                 <td class="text-success"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0.5L7.4641 5H0.535898L4 0.5Z" fill="#00EC42"/>
+                                    </svg>
+                                    4.58%
+                                 </td>
+                                 <td>$123,456,789,159</td>
+                                 <td>$373,359,580,155<br>
+                                    <small class="ms-5">635,237 BTC</small>
+                                 </td>
+                                 <td class="ms-5">18,777,768 BTC</td>
+                                 <td>
+                                    <div class="d-flex justify-content-between">
+                                       <div id="sparklinechart-4"></div>             
+                                       <div class="dropdown ms-4">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" id="dropdownMenuButton10" data-bs-toggle="dropdown" aria-expanded="false" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                                          </svg>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                                             <li><a class="dropdown-item" href="#">View Charts</a></li>
+                                             <li><a class="dropdown-item" href="#">View Markets</a></li>
+                                             <li><a class="dropdown-item" href="#">View Historical Data</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="white-space-no-wrap">
+                                 <td>
+                                       <img src="../assets/images/coins/02.png" class="img-fluid avatar avatar-30 avatar-rounded" alt="img23" />
+                                       Bitcoin BTC<a class="button btn-primary badge ms-2" type="button">Buy</a>
+                                 </td>
+                                 <td class="pe-2">$40,501.87</td>
+                                 <td class="text-success"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0.5L7.4641 5H0.535898L4 0.5Z" fill="#00EC42"/>
+                                    </svg>
+                                    6.93%
+                                 </td>
+                                 <td class="text-danger"><svg width="10" height="8" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4.5L0.535898 0L7.4641 0L4 4.5Z" fill="#FF2E2E"/>
+                                    </svg>
+                                    4.58%
+                                 </td>
+                                 <td>$123,456,789,159</td>
+                                 <td>$373,359,580,155<br>
+                                    <small class="ms-5">635,237 BTC</small>
+                                 </td>
+                                 <td class="ms-5">18,777,768 BTC</td>
+                                 <td>
+                                    <div class="d-flex justify-content-between">
+                                       <div id="sparklinechart-5"></div>             
+                                       <div class="dropdown ms-4">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" id="dropdownMenuButton10" data-bs-toggle="dropdown" aria-expanded="false" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                                          </svg>
+                                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
+                                             <li><a class="dropdown-item" href="#">View Charts</a></li>
+                                             <li><a class="dropdown-item" href="#">View Markets</a></li>
+                                             <li><a class="dropdown-item" href="#">View Historical Data</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-lg-4">
+      <div class="row">
+       
+         <div class="col-lg-12">
+            <div class="card card-body" style=" background: rgba(31, 21, 16, 0.87);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3.2px);
+            -webkit-backdrop-filter: blur(3.2px);">
+               <div>
+                  <div>
+                        <h4>History</h4>
+                  </div>
+               </div>
+               <div>
+                  <ul class="list-inline m-0 p-0">
+                     <li class="d-flex  align-items-center pt-3">
+                        <div class="d-flex justify-content-between rounded-pill"><img src="../assets/images/coins/01.png" class="img-fluid avatar avatar-40 avatar-rounded" alt="img6">
+                           <div class="ms-3 flex-grow-1">
+                           <h5 class="mb-2">Bitcoin</h5>
+                           <p class=" text-success mb-2">+$10,00</p>
+                           <p class="fs-6">Bitcoins Evolution™. 234000 Satisfied Customers From 107 Countries.</p>
+                           </div>
+                           <div class="">
+                              <p>11/02/21</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="d-flex  align-items-center pt-3">
+                        <div class="d-flex justify-content-between rounded-pill"><img src="../assets/images/coins/09.png" class="img-fluid avatar avatar-40 avatar-rounded" alt="img7">
+                           <div class="ms-3 flex-grow-1">
+                           <h5 class="mb-2">Ethereum</h5>
+                           <p class=" text-danger mb-2">-$50,00</p>
+                           <p class="fs-6">Ethereum is a decentralized, blockchain with smart contract functionality</p>
+                           </div>
+                           <div class="">
+                              <p>11/02/21</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="d-flex  align-items-center pt-3">
+                        <div class="d-flex justify-content-between rounded-pill"><img src="../assets/images/coins/06.png" class="img-fluid avatar avatar-40 avatar-rounded" alt="img8">
+                           <div class="ms-3 flex-grow-1">
+                           <h5 class="mb-2">Litecoin</h5>
+                           <p class=" text-danger mb-2">-$50,00</p>
+                           <p class="fs-6">Litecoin is a peer-to-peer cryptocurrency and open-source software</p>
+                           </div>
+                           <div class="">
+                              <p>11/02/21</p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+        
+      
+      </div>
+   </div>
+</div>
+
+      </div>
+      <footer class="footer">
+          <div class="footer-body">
+              <ul class="left-panel list-inline mb-0 p-0">
+                  <li class="list-inline-item"><a href="../dashboard/extra/privacy-policy.html" class="text-white">Privacy Policy</a></li>
+                  <li class="list-inline-item"><a href="../dashboard/extra/terms-of-service.html" class="text-white">Terms of Use</a></li>
+              </ul>
+              <div class="right-panel">
+                  ©<script>document.write(new Date().getFullYear())</script> Stiletto
+              </div>
+          </div>
+      </footer>    </main>
+     
+    <!-- Wrapper End-->
+    <!-- offcanvas start -->
+
+    <!-- Backend Bundle JavaScript -->
+    <script src="../assets/js/libs.min.js"></script>
+    <!-- widgetchart JavaScript -->
+    <script src="../assets/js/charts/widgetcharts.js"></script>
+    <!-- fslightbox JavaScript -->
+    <script src="../assets/js/fslightbox.js"></script>
+    <!-- app JavaScript -->
+    <script src="../assets/js/app.js"></script>
+    <!-- apexchart JavaScript -->
+    <script src="../assets/js/charts/apexcharts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.horizontal-multi-2 {
+    padding-top: 65px;
+}
+@media all and (max-width: 1024px) {
+    .horizontal-multi-2 {
+        padding-top: 90px;
+    }
+}
+@media all and (max-width: 991px) {
+    .horizontal-multi-2 {
+        padding-top: 65px;
+    }
+}

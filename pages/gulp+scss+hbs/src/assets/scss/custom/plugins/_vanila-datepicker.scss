@@ -1,0 +1,29 @@
+.datepicker-cell {
+    &:not(.disabled):hover {
+        background: $gray-600;
+    }
+    &.prev,
+    &.next {
+      &:not(.disabled) {
+          font-weight: 500;
+          color: $gray-500;
+      }
+    }
+    &.selected {
+        box-shadow: $component-active-shadow;
+        &:hover {
+            background-color: $primary;
+        }
+    }
+}
+.datepicker-view{
+    &.datepicker-grid {
+        .datepicker-cell {
+            height: inset;
+        }
+    }
+}
+.datepicker-controls .button {
+    color: color-contrast($card-bg) !important;
+    background: $gray-700 !important;
+}
