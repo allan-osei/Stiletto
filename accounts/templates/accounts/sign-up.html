@@ -1,0 +1,84 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TheOrange Team home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="{% static 'accounts/img/logoo.png' %}"/>
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}"/>
+  </head>
+  
+
+
+  <body style="font-family: Arial, Helvetica, sans-serif;">
+    <div class="signupFrm">
+        <form method="POST" class="form">
+         {% csrf_token %}
+          <h1 class="title fs-3"> <img class="img-fluid" style="max-height: 75px; max-width: 16%;" src="{% static 'accounts/img/logoo.png' %}" id="logoo"> Create an Account</h3>
+            {% if form.errors %}
+              {% for field in form %}
+                <div class="error-popup">
+                  {% for error in field.errors %}
+                    <span class="error-msg align-items-center text-justify" style="color: #cd5008;;">{{ error|escape }}</span>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+              <br><br>
+            {% endif %}
+          <div class="inputContainer {% if form.username.errors %}has-error{% endif %}">
+            {{form.username}}
+            <label for="" class="label">Username</label>
+            </div>
+          
+    
+          <div class="inputContainer {% if form.email.errors %}has-error{% endif %}">
+            {{form.email}}
+            <label for="" class="label">Email</label> 
+            </div>
+
+    
+          <div class="inputContainer {% if form.phone_no.errors %}has-error{% endif %}">
+            {{form.phone_no}}
+            <label for="" class="label">Phone No.</label>
+            </div>
+         
+    
+          <div class="inputContainer {% if form.password1.errors %}has-error{% endif %}">
+            {{form.password1}}
+            <label for="" class="label">Password</label>
+            </div>
+
+    
+          <div class="inputContainer {% if form.password2.errors %}has-error{% endif %}">
+            {{form.password2}}
+            <label for="" class="label">Confirm Password</label>
+          </div>
+
+          <div class="terms-privacy mt-2 text-center">
+            <p>By creating an account, you agree to our 
+              <a href="{% url 'pp_tos_page' %}" style="color: #cd5008;">Privacy Policy</a> and 
+              <a href="{% url 'pp_tos_page' %}" style="color: #cd5008;">Terms of Service</a>.
+            </p>
+          </div>
+          
+          <button type="submit" class="submitBtn">Submit</button>
+          
+          <div class="new-account mt-3 text-center">
+            <p>Already have an account? <a style="color: #cd5008;" href="{% url 'accounts:login' %}">Sign in</a>
+            </p>
+         </div>
+        </form>
+        
+      </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+

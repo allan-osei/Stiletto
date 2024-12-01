@@ -1,0 +1,195 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}<title>Discord Help</title>{%endblock%}
+{% block style %}
+  <style>
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #959494; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #616161; 
+}
+    
+    .card{
+      background: rgba(255, 255, 255, 0.22);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 1px;
+    }
+    /* .card:hover {
+      background-color: rgb(240, 239, 239);
+      transition: background-color 0.7s;
+      position: relative;
+      top: -20px;
+    } */
+    #MT{
+            max-width: 15%;
+        }
+    
+    
+  </style>
+  {% endblock %}
+  {% block content %}
+    <div class="p-5 justify-content-center text-center align-items-center">
+      <h3 class="display-3 d-inline font-monospace" style="color: #cd5008;"><i class="bi bi-discord"></i></h3>&ensp;
+      <h3 class=" d-inline display-4 font-monospace" style="color: black;">Discord</h3>
+    </div>
+
+    <br>
+    <div>
+      <p class="fw-bold fst-italic font-monospace text-center">Discord is an instant messaging and VoIP social platform which allows communication through voice calls, video calls, text messaging, and media and files.</p>
+    </div>
+
+<br><br><br>
+
+<div class="container">
+  <h3 class="text-center" style="color: #cd5008; font-weight: bold;">How It Works</h3><br>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-gear" style="font-size: 2.5rem; color: #cd5008;"></i>
+          <h5 class="card-title mt-3" style="font-weight: bold;">Step 1</h5>
+          <p class="card-text">Create a webhook in your dashboard.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-credit-card" style="font-size: 2.5rem; color: #cd5008;"></i>
+          <h5 class="card-title mt-3" style="font-weight: bold;">Step 2</h5>
+          <p class="card-text">Activate your hook on our payment processor.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-link" style="font-size: 2.5rem; color: #cd5008;"></i>
+          <h5 class="card-title mt-3" style="font-weight: bold;">Step 3</h5>
+          <p class="card-text">Attach the Webhook to your TradingView alerts along with the desired message.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-send" style="font-size: 2.5rem; color: #cd5008;"></i>
+          <h5 class="card-title mt-3" style="font-weight: bold;">Step 4</h5>
+          <p class="card-text">Send alerts to Discord Channels, Groups, and private chats.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mx-auto">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-arrow-repeat" style="font-size: 2.5rem; color: #cd5008;"></i>
+          <h5 class="card-title mt-3" style="font-weight: bold;">Step 5</h5>
+          <p class="card-text">Switch between different channels and groups anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+
+
+
+  <br>
+  <div class="container text-center">
+    <div class="alert alert-info text-center" style="background-color: #f0e3c5;" role="alert">
+      <strong>Tip:</strong> If <code>parse</code> is enabled, you can create a template that all your messages will follow. If not, you can enter curstom messages that will be forwarded without editing to telegram
+    </div><br><br><br><br>
+
+    <p style="font-size: 1.25rem; padding: 10px; border: 2px solid #cd5008; border-radius: 5px;">“
+      <strong style="color: #cd5008;">BUY EURUSD</strong>
+      <strong tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Price at which you want to enter your trade." style="color: #cd5008;">e=</strong> 1.000
+      <strong tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Target price for profit." style="color: #cd5008;">tp=</strong> 1.001
+      <strong tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Price at which you want to limit losses." style="color: #cd5008;">sl=</strong> 1.0009 
+      <strong tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Amount of the asset to trade in lots or percentage." style="color: #cd5008;">q=</strong> 0.1  
+      <strong tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Unique identifier for the trade. Can be any number as long as you rememebr it" style="color: #cd5008;">m=</strong> 77 
+      <strong tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Link to the image to send to Discord with the message." style="color: #cd5008;">link</strong>=https://www.tradingview.com/x/HFUdhKD5/
+      ”</p><br>
+
+
+
+    <div class="mt-4">
+
+      <div class="d-flex justify-content-center my-4">
+        <div class="card w-30 mx-2 p-4 shadow-sm">
+          <div class="container text-center">
+            <p><strong>Template text:</strong></p><hr>
+            <ul class="list-unstyled text-start">
+              <li class="mb-2">
+                <strong>{{side}} {{symbol}}</strong> at <strong>{{e}}</strong> 🎫,
+              </li>
+              <li class="mb-2">
+                <strong>{{q}}%</strong> of your account size,
+              </li>
+              <li class="mb-2">
+                Hold your position for the next <strong>4 hours</strong>,
+              </li>
+              <li class="mb-2">
+                Take Profit at <strong>{{tp}}</strong>, Stop Loss at <strong>{{sl}}</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <i class="bi bi-arrow-right align-self-center mx-3" style="font-size: 2rem; color: #cd5008;"></i>
+        <div class="card w-30 mx-2 p-4 shadow-sm">
+          <div class="container text-center">
+            <p><strong>Discord Message:</strong></p><hr>
+            <img src="https://www.tradingview.com/x/HFUdhKD5/" alt="TradingView Chart" class="img-fluid" style="max-width: 130px;">
+            <ul class="list-unstyled text-start">
+              <li class="mb-2">
+                <strong>BUY EURUSD</strong> at <strong>1.000</strong> 🎫,
+              </li>
+              <li class="mb-2">
+                <strong>10%</strong> of your account size,
+              </li>
+              <li class="mb-2">
+                Hold your position for the next <strong>4 hours</strong>,
+              </li>
+              <li class="mb-2">
+                Take Profit at <strong>1.001</strong>, Stop Loss at <strong>1.0009</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><br><br><br>
+    <br></div>
+  <br>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  });
+</script>
+
+
+<br><br><br>
+{% endblock %}
+
+

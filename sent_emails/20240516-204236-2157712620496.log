@@ -1,0 +1,22 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: 
+From: webmaster@localhost
+To: kelg8086@gmail.com
+Date: Thu, 16 May 2024 20:42:36 -0000
+Message-ID: <171589215601.19144.6389994529047315020@Kels-Elitebook>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Reset</title>
+</head>
+<body>
+    <p>Click the following link to reset your password:</p>
+    <p><a href="http://localhost:8000/accounts/reset/ZGIyMWZlMWQtMjNmMi00ZWI5LTlmOTQtYzEwNmFmN2I1MDhl/c7506z-2f06b0bc1ea3a8679f92206b7f6c36e9/">Reset Password</a></p>
+    <p>If you didn't request a password reset, please ignore this email.</p>
+</body>
+</html>
+-------------------------------------------------------------------------------

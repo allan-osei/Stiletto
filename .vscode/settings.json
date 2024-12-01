@@ -1,3 +1,6 @@
 {
-    "liveServer.settings.port": 5501
+    "C_Cpp.default.includePath": [
+        "c:\\Users\\GOODSPEED IT\\AppData\\Roaming\\MetaQuotes\\Terminal\\05F4DC0D1C7DA4ED8770DDD170DD9488\\MQL5\\Include\\Include",
+        "c:\\Users\\GOODSPEED IT\\AppData\\Roaming\\MetaQuotes\\Terminal\\05F4DC0D1C7DA4ED8770DDD170DD9488\\MQL5\\Include"
+    ]
 }

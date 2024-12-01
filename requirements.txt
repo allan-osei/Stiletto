@@ -1,0 +1,6 @@
+reportlab
+requests
+discord-webhook
+pytelegrambotapi
+django
+django-rest-framework

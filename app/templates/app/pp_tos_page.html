@@ -1,0 +1,87 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}<title>Privacy Policy & Terms of Service</title>{%endblock%}
+{% block style %}
+  <style>
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #959494; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #616161; 
+}
+    
+    .card{
+      background: rgba(255, 255, 255, 0.22);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 1px;
+    }
+    /* .card:hover {
+      background-color: rgb(240, 239, 239);
+      transition: background-color 0.7s;
+      position: relative;
+      top: -20px;
+    } */
+    #MT{
+            max-width: 15%;
+        }
+    
+    
+  </style>
+  {% endblock %}
+
+  {% block content %}
+    <div class="justify-content-center text-center align-items-center">
+      <h3 class="display-4 font-monospace" style="color: #cd5008;">Our Privacy Policy & Terms of Service</h3>
+    </div>
+
+
+<br><br><br>
+
+   <div class="card w-75 p-3 mx-auto" id="card-body">
+        <h3 class="fs-3" style="color: #cd5008;"> Privacy Policy</h3>
+            <ul>
+                <li>The Orange Team allows users to forward alerts from tradingview to telegram, discord, mt5 and other platforms.</li><br>
+                <li>Name, email, payment info is collected by a third party we utilise, but we don't store any. We store the alert data from tradingview. What you send through us is stored.</li><br>
+                <li>We display the data we collect to provide insights to the users that own that data. Metrics, essentially. Data is not used for marketing.</li><br>
+                <li>Deleting a webhook deletes all data associated with it, you can get a pdf summary of your financial data for any webhook you have created on your dashboard.</li><br>
+                <li>We salt and hash passwords, and encrypt any other sensitive fields.</li><br>
+                <li>We use the standard cookies to keep users logged in on their favourite devices.</li><br>
+                <li>Users will be notified about changes to the privacy policy via the email they signed up with.</li><br>
+                <li>For any questions, you may contact us on our various social media pages or via email.</li>
+            </ul>
+   </div>
+
+    <br><br><br>
+
+   <div class="card w-75 p-3 mx-auto" id="card-body">
+        <h3 class="fs-3" style="color: #cd5008;">Terms of Service</h3>
+            <ul>
+                <li>The Orange Team allows users to forward alerts from tradingview to telegram, discord, mt5 and other platforms.</li><br>
+                <li>By using our service you agree to our terms of service.</li><br>
+                <li>We reserve the right to modify our terms of service and users will be informed via email.</li><br>
+                <li>Don't share webhook urls or passwords,and use strong passwords.</li><br>
+                <li>Don't try to reverse engineer the service circumvent normal functions or abuse the service.</li><br>
+                <li>Users are allowed to use the content they generate however they wish.</li><br>
+                <li>Submission of illegal materials is strictly prohibited.</li><br>
+                <li>Payments are handled by a thirdparty integration(lemonsqueezy.com) refunds are not available on any of our plans at this time.</li><br>
+                <li>We are not liable for any issues arising from service use, although we will do our very best to prevent the occurrence of such issues.</li><br>
+                <li>We will terminate accounts found to be circumventing security measures, attempting to gain access to restricted content, posting illegal content, abusing the system, etc. This is subject to our judgment on individual cases.</li><br>
+                <li>You may contact us via email with questions regarding our terms of service.</li>
+            </ul>
+  </div>
+<br><br><br><br><br><br>
+{% endblock %}

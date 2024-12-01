@@ -1,0 +1,232 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}<title>Pricing</title>{%endblock%}
+
+  {% block content %}
+  <style>
+
+#art{
+  max-width: 10%;
+}
+#art2{
+  max-width: 17%;
+}
+
+#card-body{
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#MT{
+        max-height: 45px;
+    }
+</style>
+   <br>
+    <div class="p-5 mx-auto text-center">
+      <img class="img-fluid d-inline" id="art" src="{% static 'app/img/savings.svg'%}"> &ensp;&ensp;
+      <h4 class="text-center d-inline fw-bold fst-italic font-monospace mx-auto" style="width:60%; ">Choose a pricing plan that suites you!</h1>
+    </div>
+    <br>
+    <br><br>
+    <div class="justify-content-center text-center align-items-center">
+      <h4 class="display-6"><i class="bi bi-discord" style="color: black;"></i>&ensp; Discord</h4>
+    </div>
+    <div class="card w-75 mx-auto" style=" background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);">
+      <div class="card-body">
+        <div class="text-center row ">
+          <div class="card col-3 mx-auto mb-3 mb-sm-0" style="width: 20rem;
+            box-shadow: 0 4px 30px rgba(253, 215, 2, 0.574);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Essential</h5>
+              <h2 class="card-subtitle mb-2">$0.99 / month</h2><br>
+              <div>
+                  <p>100 Alerts/Day</p>
+                  <p>2 Channels</p>
+                  <p>Metrics/Reporting</p>
+                  <p>Alerts Dashbaord</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+
+          <div class="card col-3 mx-auto mb-3 mb-sm-0" style="width: 20rem;
+             box-shadow: 0 4px 30px rgba(253, 107, 2, 0.601);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Elite</h5>
+              <h2 class="card-subtitle mb-2">$2.60 / month</h2><br>
+              <div>
+                <p>500 Alerts/Day</p>
+                <p>5 Channels</p>
+                <p>Metrics/Reporting</p>
+                <p>Alerts Dashbaord</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+
+          <div class="card col-3 mx-auto" style="width: 20rem;
+             box-shadow: 0 4px 30px rgba(2, 132, 253, 0.588);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Professional</h5>
+              <h2 class="card-subtitle mb-2">$5.00 / month</h2><br>
+              <div>
+                <p>1k Alerts/Day</p>
+                <p> 10 Channels</p>
+                <p>Metrics/Reporting</p>
+                <p>Alerts Dashbaord</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+          </div>
+      </div>
+    </div>
+
+
+
+    <br><br><br><br><br>
+
+    <div class="justify-content-center text-center align-items-center">
+      <h4 class="display-6"><i class="bi bi-telegram" style="color: black;"></i>&ensp; Telegram</h4>
+    </div>
+    <div class="card w-75 mx-auto" style=" background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);">
+      <div class="card-body">
+        <div class="text-center row ">
+          <div class="card col-3 mx-auto mb-3 mb-sm-0" style="width: 20rem;
+          box-shadow: 0 4px 30px rgba(253, 215, 2, 0.574);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Essential</h5>
+              <h2 class="card-subtitle mb-2">$0.99 / month</h2><br>
+              <div>
+                  <p>100 Alerts/Day</p>
+                  <p>Image Uploads</p>
+                  <p>Metrics/Reporting</p>
+                  <p>Alerts Dashbaord</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+
+          <div class="card col-3 mx-auto mb-3 mb-sm-0" style="width: 20rem;
+            box-shadow: 0 4px 30px rgba(253, 107, 2, 0.601);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Elite</h5>
+              <h2 class="card-subtitle mb-2">$2.00 / month</h2><br>
+              <div>
+                  <p>500 Alerts/Day</p>
+                  <p>Image Uploads</p>
+                  <p>Metrics/Reporting</p>
+                  <p>Alerts Dashbaord</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+
+          <div class="card col-3 mx-auto" style="width: 20rem;
+            box-shadow: 0 4px 30px rgba(2, 132, 253, 0.588);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Professional</h5>
+              <h2 class="card-subtitle mb-2">$2.60 / month</h2><br>
+              <div>
+                  <p>1k Alerts/Day</p>
+                  <p>Image Uploads</p>
+                  <p>Metrics/Reporting</p>
+                  <p>Alerts Dashbaord</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+          </div>
+      </div>
+    </div>
+
+
+    <br>
+    <div class="p-5 mx-auto text-center">
+      <h4 class="text-center d-inline lead fst-italic font-monospace mx-auto" style="width:60%; ">Investment preceedes prosperity</h1>&ensp;&ensp;
+        <img class="img-fluid d-inline" id="art2" src=" {% static 'app/img/money-filterisation.png' %}">
+    </div>
+    <br>
+
+    <div class="justify-content-center text-center align-items-center">
+      <h6 class="display-6"><img class="img-fluid" src="{% static 'app/img/Meta.png' %} " alt="meta" id="MT">&ensp; MetaTrader 5</h6>
+    </div>
+    <div class="card w-75 mx-auto" style=" background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);">
+      <div class="card-body">
+        <div class="text-center row ">
+          <div class="card col-3 mx-auto mb-3 mb-sm-0" style="width: 20rem;
+            box-shadow: 0 4px 30px rgba(253, 215, 2, 0.574);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Essential</h5>
+              <h2 class="card-subtitle mb-2">$4.99 / month</h2><br>
+              <div>
+                  <p>300 Alerts/Day</p>
+                  <p>Alerts Dashbaord</p>
+                  <p>Alert History</p>
+                  <p>24/7 Support</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+
+          <div class="card col-3 mx-auto mb-3 mb-sm-0" style="width: 20rem;
+            box-shadow: 0 4px 30px rgba(253, 107, 2, 0.601);;" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Elite</h5>
+              <h2 class="card-subtitle mb-2">$6.99 / month</h2><br>
+              <div>
+                  <p>Faster Trade Execution</p>
+                  <p>1k Alerts/Day</p>
+                  <p>Alerts Dashbaord</p>
+                  <p> Extended Alert History</p>
+                  <p>24/7 Support</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+
+          <div class="card col-3 mx-auto" style="width: 20rem;
+            box-shadow: 0 4px 30px rgba(2, 132, 253, 0.588);" id="card-body">
+            <div>
+            <div class="card-body">
+              <h5 class="card-title">Professional</h5>
+              <h2 class="card-subtitle mb-2">$12.99 / month</h2><br>
+              <div>
+                  <p>Faster Trade Execution</p>
+                  <p>2k Alerts/Day</p>
+                  <p>Alerts Dashbaord</p>
+                  <p> Extended Alert History</p>
+                  <p>24/7 Support</p>
+                  <p>Trade Notifications (Telegram)</p>
+              </div><br>
+              <a href="{% url 'dashboard' %}" class="btn card-link" style="color: #cd5008; border-color: black;">Subscribe</a>
+            </div></div>
+          </div>
+          </div>
+      </div>
+    </div>
+
+<br><br><br><br><br><br>
+{%endblock%}

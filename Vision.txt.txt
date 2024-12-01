@@ -1,0 +1,17 @@
+Stiletto design vision
+
+- Stiletto is a tech startup with the aim of making the lives of forex and crypto traders easier.
+- The site should reflect a modern, and comfortable feeling.
+- What we do is connect tradingview(easily the best chart analysis platform) with trading platforms, crypto exchanges as well as with social platforms like discord, telegram and twitter(later). That way, they can post their trades to social platforms, and trading platforms all from tradingview.
+
+reference www.tradingview.to for a similar product
+
+We'll need (for now):
+
+- A homepage that conveys our message nicely
+- A dashboard That allows you to see and create Webhooks by clicking a button that opens a modal (see the reference, and the bootstrap modal docs). Webhook creation needs a name, and a daily limit.
+	- You should be able to see your existing webhooks. The name, Link and Hits(just a number to display), as well as a settings icon button.
+	- There needs to be a place to see your history (stuff sent by your webhooks), just a long list basically
+- A pricing and payments page with prices, and 3 packages, Basic, Elite and Professional.
+
+Dont worry about connecting the pages and components together, I just need the designs and UI, and ill put it together

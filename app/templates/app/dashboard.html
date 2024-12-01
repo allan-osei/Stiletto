@@ -1,0 +1,390 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}<title>Dashboard</title>{% endblock %}
+{% load custom_filters %}
+<!-- {% block hstyle %} <link rel="stylesheet" href="{% static 'app/css/style.css' %}"> {% endblock %} -->
+{% block modals %}
+<!-- Modal -->
+<div class="modal fade" id="telegramModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createwebhook" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Create Webhook</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'submitwebhooktg' %}" method="post">
+          {%csrf_token%}
+          {{telegram_form.as_p}}
+          <div class="float-end">
+            <button type="submit" class="btn" style="color: white; background-color: #cd5008;">Create</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Duplicate for mt5_form -->
+<div class="modal fade" id="mt5Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createwebhook" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Create Webhook</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'submitwebhookmt5' %}" method="post">
+          {%csrf_token%}
+          {{mt5_form.as_p}}
+          <div class="float-end">
+            <button type="submit" class="btn" style="color: white; background-color: #cd5008;">Create</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Duplicate for discord_form -->
+<div class="modal fade" id="discordModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createwebhook" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Create Webhook</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'submitwebhookdiscord' %}" method="post">
+          {%csrf_token%}
+          {{discord_form.as_p}}
+          <div class="float-end">
+            <button type="submit" class="btn" style="color: white; background-color: #cd5008;">Create</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editwebhook" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Edit Webhook</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="removeElements()"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'add_chat' %}" onsubmit="appendText()" method="post">
+          {%csrf_token%}
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <label for="chatid" id="cid" class="input-group-text">Chat ID</label>
+              <button type="button" id="#ebtn" onclick="add_chat_id()" class="btn btn-outline-secondary" id="addInput">+ add</button>
+            </div>
+
+          </div>
+          <input type="hidden" id="editmodalwid" name="editmodalwid">
+          <input type="hidden" id="editmodalw" name="editmodalw">
+          <div class="float-end mt-1">
+            <button type="submit" style="background-color: #cd5008; color:white;" class="btn">Submit</button>
+            
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+    <div class="justify-content-center text-center align-items-center">
+      <h3 class="display-3 font-monospace" style="color: #cd5008;"> Dashboard <img class="img-fluid" style="height: 200px;" src="{% static 'app/img/illustration-for-investment-concept.svg' %}" alt="meta" id="MT"></h3>
+    </div>
+
+<br><br><br><br>
+
+<section>
+    <div class="text-center">
+        <p class="fs-4 font-monospace" style="color: #cd5008;">Webhooks</p>
+    </div>
+    <div>
+        {% if webhooks %}
+        <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide mx-auto w-75" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              {% for webhook in webhooks %}
+              <div class="carousel-item {%if forloop.first%}active{%endif%}">
+                <div class="card w-75 mb-3 mx-auto" id="webhook">
+                  <div class="card-body">
+                    <div class="card-title">
+                      <a href="{% if webhook.identifier == 'tg' %}{% url 'telegram_help_page' %}{% elif webhook.identifier == 'discord' %}{% url 'discord_help_page' %}{% elif webhook.identifier == 'mt5' %}{% url 'mt5_help_page' %}{% endif %}" class="info-button" style="float: right;"><i class="bi bi-info-circle" style="color: #cd5008;"></i></a>
+                      <h5>{% if webhook.identifier == "tg" %}
+                        <i class="bi bi-telegram" style="color: #0088cc;"></i>
+                      {% elif webhook.identifier == "mt5" %}
+                        <i class="bi bi-graph-up" style="color: #6610f2;"></i>
+                      {% elif webhook.identifier == "discord" %}
+                        <i class="bi bi-discord" style="color: #7289da;"></i>
+                      {% endif %}
+                      {{webhook.name}}</h5>
+                      
+                      <h6 class="text-muted">Renewal Date: {{webhook.renews_at}}</h6></div>
+                    {% if webhook.identifier == "tg" %}
+                        <p class="card-text" id="link" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{request.scheme}}://{{ request.get_host }}{% url 'telegram_signal_api_endpoint' webhook.pk %}</p>
+                    {% elif webhook.identifier == "mt5" %}
+                        <p class="card-text" id="link" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{request.scheme}}://{{ request.get_host }}{% url 'mt5_signal_api_endpoint' webhook.pk %}</p>
+                    {% elif webhook.identifier == "discord" %}
+                        <p class="card-text" id="link" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{request.scheme}}://{{ request.get_host }}{% url 'discord_signal_api_endpoint' webhook.pk %}</p>
+                    {% endif %}
+                    
+                    <a href="{% url 'toggle_webhook_status' webhook.pk webhook.identifier %}" title="{% if webhook.pause == 'active' %}Pause{%else%}Resume{%endif%}" class="fs-4 text-black"><i class="bi bi-{% if webhook.pause == 'active' %}pause{%else%}play{%endif%}-circle" style="color: #cd5008;"></i></a> &emsp;
+                    
+                    <a href="#" class="fs-4 text-black" title="Copy" onclick="copy(event)"><i class="bi bi-clipboard-data" style="color: #cd5008;"></i></a>&emsp;
+                    
+                    <a href="#" class="fs-4 text-black" data-bs-toggle="modal" onclick="add_data('{{webhook.pk}}', '{{webhook.identifier}}',  '{{webhook.name}}', {% if webhook.identifier == 'tg' or webhook.identifier == 'discord' %} {{webhook.chat_limit}}, '{{webhook.message_prefix}}', '{{webhook.message_suffix}}', [{% for chat in webhook.telegramchat_set.all%} '{{chat.chat_id}}', {%endfor%}], '{{webhook.parse}}', '{{webhook.message_format}}' {%endif%})" data-bs-target="#editmodal" title="Edit"><i class="bi bi-pencil" style="color: #cd5008;"></i></a>&emsp;
+                  
+                    <span class="dropend">
+                      <a class="fs-4 text-black text-decoration-none" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" title="Manage">
+                        <i class="bi bi-gear" style="color: #cd5008;"></i>
+                      </a>&emsp;
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        {% if webhook.identifier == "tg" %}
+                        <li><a class="dropdown-item" href="{% if not webhook.subscription_id %} {{telegram_checkout}}&checkout[custom][wid]={{webhook.pk}} {% endif %}" {% if webhook.subscription_id %}disabled{% endif %}>Subscribe</a></li>
+                        {% elif webhook.identifier == "mt5" %}
+                        <li><a class="dropdown-item" href="{% if not webhook.subscription_id %} {{mt5_checkout}}&checkout[custom][wid]={{webhook.pk}} {% endif %}" {% if webhook.subscription_id %}disabled{% endif %}>Subscribe</a></li>
+                        {% elif webhook.identifier == "discord" %}
+                        <li><a class="dropdown-item" href="{% if not webhook.subscription_id %} {{discord_checkout}}&checkout[custom][wid]={{webhook.pk}} {% endif %}" {% if webhook.subscription_id %}disabled{% endif %}>Subscribe</a></li>
+                        {% endif %}
+                        <!-- <li><a class="dropdown-item" href="#">My Plan</a></li> -->
+                        <li><a class="dropdown-item" href="{{customer_portal}}">Edit Subscriptions</a></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="if(confirm('Are you sure you want to delete this webhook?')) { window.location.href='{% url 'delete_webhook' webhook.pk webhook.identifier%}'; }">Delete</a></li>
+                      </ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+            <button class="carousel-control-prev" style="width:10%;" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" style="width:10%;"  type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        {% else %}
+            <div class="text-center mt-5">
+                <h3 class="text-muted">There's nothing to see here yet...</h3>
+                <p class="lead">Click the create button below to get started, or visit our <a href="">help pages</a> to learn how this works!</p>
+
+            </div>
+            
+          {%endif%}
+          <br><br><br>
+
+            <div class="row mx-auto" style="width: 95%;">
+              <div class="col-sm-4 mb-3 mb-sm-0 mx-auto" style="width: 25rem;">
+                <div class="card" id="webhook" style="height: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title text-muted">Manage Webhooks</h5>
+                    <div class="list-group list-group-flush">
+                      <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                        <a href="{% url 'telegram_help_page' %}" class="text-decoration-none text-black"><i style="color:#cd5008;" class="bi bi-file-earmark-richtext-fill fs-5"></i> &ensp; 
+                          Help </a>
+                      </button>
+
+                      <button  class="list-group-item list-group-item-action">
+                        <a href="{{customer_portal}}" class="text-decoration-none text-black"><i style="color: #cd5008;"  class="bi bi-credit-card-fill fs-5"></i> &ensp; 
+                          Subscriptions </a>
+                      </button>
+
+      
+                        <button class="list-group-item list-group-item-action btn btn-secondary" type="button" id="exportDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i style="color: #cd5008;" class="bi bi-clock-history fs-5"></i> &ensp; Export
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="exportDropdown">
+                          {% for webhook in webhooks %}
+                          <li><a class="dropdown-item" onclick="get_notes('{{webhook.pk}}', '{{webhook.identifier}}')" type="button">{{webhook.name}}</a></li>
+                          {% endfor %}
+                        </ul>
+
+
+                      <button type="button" class="list-group-item list-group-item-action">
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;"  class="bi bi-database-fill-check fs-5"></i> &ensp; 
+                          Webhooks : {{webhooks|length}} </a>
+                      </button>
+
+                      <button type="button" class="list-group-item list-group-item-action" disabled>Stay sharp, stay focused</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 mx-auto d-none d-sm-block">
+                <img class="img-fluid" src="{% static 'app/img/cash-flow.svg' %}" alt="meta" id="mid">
+              </div>
+              <div class="col-sm-4 mx-auto"  style="width: 25rem;">
+                <div class="card" id="webhook" style="height: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title text-muted">Actions</h5>
+                    <div class="list-group list-group-flush">
+                      <button type="button" class="list-group-item list-group-item-action btn btn-secondary" data-bs-toggle="dropdown" aria-expanded="false" aria-current="true">
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;" class="bi bi-plus-square-fill fs-5"></i> &ensp; 
+                          Create </a>
+                      </button>
+
+                      <ul class="dropdown-menu">
+                      <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#telegramModal">
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;" class="bi bi-telegram fs-5"></i> &ensp; 
+                          Telegram </a>
+                      </button>
+
+                      <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#discordModal">
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;" class="bi bi-discord fs-5"></i> &ensp; 
+                          Discord </a>
+                      </button>
+
+                      <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#mt5Modal">
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;" class="bi bi-journal-text fs-5"></i> &ensp; 
+                          Mt5 </a>
+                      </button>
+                      </ul>
+
+                      <button  class="list-group-item list-group-item-action" onclick="showToast('Use the Gear icon to delete webhooks')" >
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;"  class="bi bi-trash3-fill fs-5"></i> &ensp; 
+                          Delete </a>
+                      </button>
+
+                      <button type="button" onclick="showToast('Use the Gear and Pencil icons to update info about individual webhooks')" class="list-group-item list-group-item-action">
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;"  class="bi bi-upload fs-5"></i> &ensp; 
+                          Update </a>
+                      </button>
+
+                      <button type="button" class="list-group-item list-group-item-action" onclick="showToast('Coming soon!!!')">
+                        <a href="#" class="text-decoration-none text-black"><i style="color: #cd5008;"  class="bi bi-binoculars-fill fs-5"></i> &ensp; 
+                          Hits </a>
+                      </button>
+
+                      <button type="button" class="list-group-item list-group-item-action" disabled>Embrace risk, Embrace opportunity</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    </div>
+</section>
+<br><br>
+{% if orders %}
+<section>
+    <br>
+    <div>
+        <div id="carouselExampleAutoplaying1" class="carousel carousel-dark slide mx-auto" style="width: inherit;" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              {% for chunk in orders|for_three_loop %}
+              {% if forloop.first %}
+              <div class="carousel-item active">
+              {% else %}
+              <div class="carousel-item">
+              {% endif %}
+                <div class="d-flex justify-content-around mx-auto" style="width: 80%;">
+                  {% for order in chunk %}
+                  <div class="card mb-3" style="width: 20rem;">
+                    <div class="card-body">
+                      <h5 class="card-title" style="color: #cd5008;">{{order.webhook_name}}</h5>
+                      <p class="card-text"><small class="text-muted">{{order.date_created}}</small></p>
+                      <p class="card-text">{{order.alert_text}}</p>
+                      <textarea class="form-control" rows="3" placeholder="{{order.trader_notes}}"></textarea>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div class="text mt-2"><strong>Rating:</strong>
+                          {% for star in order.rating|star_rating %}
+                            {% if star == 'filled' %}
+                            <span class="bi-star-fill" onclick="toggleStar(this)"></span>
+                            {% else %}
+                              <span class="bi-star" onclick="toggleStar(this)"></span>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-primary" onclick="submitNote(this, `{% url 'note_api_endpoint' %}`, '{{order.pk}}', '{{csrf_token}}')">Save</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <button class="carousel-control-prev" style="width:10%;" type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" style="width:10%;" type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div id="carouselExampleAutoplaying2" style="display: none;" class="carousel carousel-dark slide mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              {% for o in orders %}
+              <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="d-flex justify-content-center mx-auto" style="width: 100%;">
+                  <div class="card mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                      <h5 class="card-title" style="color: #cd5008;">Webhook Name: Test Hook {{ i }}</h5>
+                      <p class="card-text"><small class="text-muted">Date Created: 2023-01-0{{ i }}</small></p>
+                      <p class="card-text">Alert Text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.</p>
+                      <textarea class="form-control" rows="3" placeholder="Alert Notes: Lorem ipsum dolor sit amet..."></textarea>
+                      <div class="d-flex justify-content-between mt-2">
+                        <div class="text mt-2"><strong>Rating:</strong>
+                          {% for star in o.rating|star_rating %}
+                            {% if star == 'filled' %}
+                              <span class="bi-star-fill" onclick="toggleStar(this)"></span>
+                            {% else %}
+                              <span class="bi-star" onclick="toggleStar(this)"></span>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                        <div>
+                          <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</section>
+{% endif %}
+<br><br><br><br>
+<script src="{% static 'app/js/app1.js' %}"></script>
+  {% for error in errors %}
+  <script>displayError("{{error}}");</script>
+  {% endfor %}
+  {% for message in messages %}
+  <script>showToast("{{message}}")</script>
+  {% endfor %}
+   <br><br><br><br><br><br>
+    {% endblock %}
+
+
